@@ -1,0 +1,33 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-style: sans-serif;
+}
+
+header{
+    width: 100vw;
+    height: auto;
+    display: flex;
+	align-items: center;
+    justify-content: space-evenly;
+    background-color: bisque;
+}
+
+main{
+	margin-top: 5vh;
+	
+	width: auto;
+	background-color: blueviolet;
+} 
+
+footer{
+	margin-top: 5vh;
+	width: 100vw;
+	height: 15vh;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	background-color: blanchedalmond;
+}
+
