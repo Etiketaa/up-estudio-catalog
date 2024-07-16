@@ -24,7 +24,7 @@
         </div>
         <div class="navbar navbar-dark bg-dark shadow-sm">
             <div class="container">
-                <a href="index.php" class="navbar-brand d-flex align-items-center">
+            <a href="index.php" class="navbar-brand d-flex align-items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-gem"
                         viewBox="0 0 16 16">
                         <path
@@ -56,7 +56,7 @@
                             <li><a class="dropdown-item" href="filtro-p21.php"><button class="dropdown-item"
                                         type="button">Pink
                                         21</button></a></li>
-                            <li><a class="dropdown-item" href="filtro-pola.php"><button class="dropdown-item"
+                            <li><a class="dropdown-item" href="filtro-pola-php"><button class="dropdown-item"
                                         type="button">Pola
                                         Aylr</button></a></li>
                             <li><a class="dropdown-item" href="filtro-ruby.php"><button class="dropdown-item"
@@ -74,12 +74,12 @@
                         <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button"
                             aria-expanded="false">Categorias</a>
                             <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="accesorios.php">Accesorios</a></li>
-                            <li><a class="dropdown-item" href="cejas.php">Cejas</a></li>
-                            <li><a class="dropdown-item" href="labios.php">Labios</a></li>
-                            <li><a class="dropdown-item" href="ojos.php">Ojos</a></li>
-                            <li><a class="dropdown-item" href="pestañas.php">Pestañas</a></li>
-                            <li><a class="dropdown-item" href="rostro.php">Rostro</a></li>
+                            <li><a class="dropdown-item" href="#">Accesorios</a></li>
+                            <li><a class="dropdown-item" href="#">Cejas</a></li>
+                            <li><a class="dropdown-item" href="#">Labios</a></li>
+                            <li><a class="dropdown-item" href="#">Ojos</a></li>
+                            <li><a class="dropdown-item" href="#">Pestañas</a></li>
+                            <li><a class="dropdown-item" href="#">Rostro    </a></li>
                             </ul>
                     </li>
                     <li class="nav-item">
@@ -104,7 +104,7 @@
                         Allure</button></a></li>
             <li><a class="dropdown-item" href="filtro-p21.php"><button class="dropdown-item" type="button">Pink
                         21</button></a></li>
-            <li><a class="dropdown-item" href="filtro-pola-php"><button class="dropdown-item" type="button">Pola
+            <li><a class="dropdown-item" href="filtro-pola.php"><button class="dropdown-item" type="button">Pola
                         Aylr</button></a></li>
             <li><a class="dropdown-item" href="filtro-ruby.php"><button class="dropdown-item" type="button">Ruby
                         Rose</button></a></li>
@@ -127,7 +127,7 @@
                     $conexion = mysqli_connect("127.0.0.1", "root", "");
                     mysqli_select_db($conexion, "upestudio");
 
-                    $consulta = "SELECT * FROM productos";
+                    $consulta = "SELECT * FROM productos WHERE marca = 'Moc Allure' ";
                     $datos = mysqli_query($conexion, $consulta);
 
                     while ($reg = mysqli_fetch_array($datos)) { ?>
@@ -154,7 +154,6 @@
                                         <?php echo ucwords($reg['marca']) ?>
                                     </h3>
                                     <span>$ <?php echo $reg['precio']; ?></span>
-                                    
                                     <a href="./productos.php?id=<?php echo $reg['id']; ?>"><button type="button"
                                             class="btn btn-outline-info">Info</button></a>
                                     <a href="https://wa.me/5492915784649?text=Hola,%20me%20gustaría%20comprar%20la%20<?php echo urlencode($reg['articulo']); ?>"

@@ -170,12 +170,12 @@ a {
 	}
 }
 
-main {
+
+form {
 	margin-top: 5vh;
-
-	width: auto;
-
+	width: 80%;
 }
+
 
 /*  Cards   */
 
@@ -247,7 +247,7 @@ footer {
 }
 
 svg {
-	color: yellow;
+	color: white;
 }
 
 .footer-copy {
